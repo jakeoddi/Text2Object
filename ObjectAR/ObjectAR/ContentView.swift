@@ -8,10 +8,49 @@
 import SwiftUI
 import RealityKit
 import ARKit
+//import XCTest
 
 struct ContentView : View {
+    // create String array to store model names
+    var models: [String] = ["toy_biplane", "fender_stratocaster"]
+    
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+//        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        
+        // new stack in Z dimension (in vs out)
+        ZStack(alignment: .bottom) {
+            // instantiate ARView
+            ARViewContainer()
+            
+            // new scroll view to pick models from
+            ScrollView(.horizontal, showsIndicators: false) {
+                // new stack in horizontal dimension (left vs right)
+                HStack(spacing: 30) {
+                    // iterate through each model in `models`
+                    ForEach(0 ..< self.models.count) {
+                        // get index
+                        index in
+                        // check each model is being loaded
+//                        Text(self.models[index])
+                        
+                        // button to select models
+                        Button(action: {
+                            print("DEBUG: selected model with name \(self.models[index])")
+                        }) {
+                           // get images for buttons
+                            Image(uiImage:
+                                    UIImage(named: self.models[index])!
+                            ) // add attributes to image
+                            .resizable()
+                            .frame(width: 80, height: 80).aspectRatio(1/1, contentMode: .fit)
+                        } // configure button style
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -34,14 +73,8 @@ struct ARViewContainer: UIViewRepresentable {
         
         // add anchor to scene
         arView.scene.addAnchor(sphereAnchor)
+
         
-//
-//        // Load the "Box" scene from the "Experience" Reality File
-//        let boxAnchor = try! Experience.loadBox()
-//
-//        // Add the box anchor to the scene
-//        arView.scene.anchors.append(boxAnchor)
-//
         return arView
         
     }
@@ -53,7 +86,11 @@ struct ARViewContainer: UIViewRepresentable {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView()
+            ContentView()
+.previewInterfaceOrientation(.landscapeRight)
+        }
     }
 }
 #endif

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4514AE2E27E2E808008B0653 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4514AE2D27E2E808008B0653 /* fender_stratocaster.usdz */; };
+		4514AE3027E2E81B008B0653 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 4514AE2F27E2E81B008B0653 /* toy_biplane.usdz */; };
 		457FDE6C27D95E5D0087E6A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FDE6B27D95E5D0087E6A8 /* AppDelegate.swift */; };
 		457FDE6E27D95E5D0087E6A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FDE6D27D95E5D0087E6A8 /* ContentView.swift */; };
-		457FDE7027D95E5D0087E6A8 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 457FDE6F27D95E5D0087E6A8 /* Experience.rcproject */; };
 		457FDE7227D95E5F0087E6A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457FDE7127D95E5F0087E6A8 /* Assets.xcassets */; };
 		457FDE7527D95E5F0087E6A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457FDE7427D95E5F0087E6A8 /* Preview Assets.xcassets */; };
 		457FDE7F27D95E5F0087E6A8 /* ObjectARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FDE7E27D95E5F0087E6A8 /* ObjectARTests.swift */; };
@@ -35,10 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4514AE2D27E2E808008B0653 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
+		4514AE2F27E2E81B008B0653 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
 		457FDE6827D95E5D0087E6A8 /* ObjectAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		457FDE6B27D95E5D0087E6A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457FDE6D27D95E5D0087E6A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		457FDE6F27D95E5D0087E6A8 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		457FDE7127D95E5F0087E6A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		457FDE7427D95E5F0087E6A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		457FDE7A27D95E5F0087E6A8 /* ObjectARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4514AE2C27E2E7CC008B0653 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4514AE2F27E2E81B008B0653 /* toy_biplane.usdz */,
+				4514AE2D27E2E808008B0653 /* fender_stratocaster.usdz */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		457FDE5F27D95E5D0087E6A8 = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +109,7 @@
 			children = (
 				457FDE6B27D95E5D0087E6A8 /* AppDelegate.swift */,
 				457FDE6D27D95E5D0087E6A8 /* ContentView.swift */,
-				457FDE6F27D95E5D0087E6A8 /* Experience.rcproject */,
+				4514AE2C27E2E7CC008B0653 /* Models */,
 				457FDE7127D95E5F0087E6A8 /* Assets.xcassets */,
 				457FDE7327D95E5F0087E6A8 /* Preview Content */,
 			);
@@ -236,6 +247,8 @@
 			files = (
 				457FDE7527D95E5F0087E6A8 /* Preview Assets.xcassets in Resources */,
 				457FDE7227D95E5F0087E6A8 /* Assets.xcassets in Resources */,
+				4514AE3027E2E81B008B0653 /* toy_biplane.usdz in Resources */,
+				4514AE2E27E2E808008B0653 /* fender_stratocaster.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +275,6 @@
 			files = (
 				457FDE6E27D95E5D0087E6A8 /* ContentView.swift in Sources */,
 				457FDE6C27D95E5D0087E6A8 /* AppDelegate.swift in Sources */,
-				457FDE7027D95E5D0087E6A8 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
