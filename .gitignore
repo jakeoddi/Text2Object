@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 
+/notebooks/DCGAN-tutorial/
+
 # C extensions
 *.so
 
